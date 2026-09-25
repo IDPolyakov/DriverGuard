@@ -15,7 +15,7 @@
                 "strategy": "set"
             },
             "binaryDir": "${sourceDir}/_build",
-            "toolchainFile": "D:/Programs/vcpkg/scripts/buildsystems/vcpkg.cmake",
+            "toolchainFile": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
             "cacheVariables": {
                 "VCPKG_TARGET_TRIPLET": "x64-windows"
             }
@@ -31,15 +31,6 @@
             "displayName": "Windows MSVC x64 - Release",
             "description": "Configure DriverGuard for Visual Studio 2022 and vcpkg",
             "inherits": "windows-msvc-base"
-        },
-        {
-            "name": "Enter",
-            "description": "",
-            "displayName": "",
-            "inherits": [
-                "debug",
-                "release"
-            ]
         }
     ],
     "buildPresets": [
