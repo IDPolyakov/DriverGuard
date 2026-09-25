@@ -1,0 +1,59 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 21,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "windows-msvc-base",
+            "hidden": true,
+            "generator": "Visual Studio 17 2022",
+            "architecture": {
+                "value": "x64",
+                "strategy": "set"
+            },
+            "binaryDir": "${sourceDir}/_build",
+            "toolchainFile": "D:/Programs/vcpkg/scripts/buildsystems/vcpkg.cmake",
+            "cacheVariables": {
+                "VCPKG_TARGET_TRIPLET": "x64-windows"
+            }
+        },
+        {
+            "name": "debug",
+            "displayName": "Windows MSVC x64 - Debug",
+            "description": "Configure DriverGuard for Visual Studio 2022 and vcpkg",
+            "inherits": "windows-msvc-base"
+        },
+        {
+            "name": "release",
+            "displayName": "Windows MSVC x64 - Release",
+            "description": "Configure DriverGuard for Visual Studio 2022 and vcpkg",
+            "inherits": "windows-msvc-base"
+        },
+        {
+            "name": "Enter",
+            "description": "",
+            "displayName": "",
+            "inherits": [
+                "debug",
+                "release"
+            ]
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "debug",
+            "displayName": "Build Debug",
+            "configurePreset": "debug",
+            "configuration": "Debug"
+        },
+        {
+            "name": "release",
+            "displayName": "Build Release",
+            "configurePreset": "release",
+            "configuration": "Release"
+        }
+    ]
+}

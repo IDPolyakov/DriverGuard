@@ -1,0 +1,14 @@
+/_build/
+/build/
+/.cache/
+/.vs/
+/.vscode/*.log
+
+*.user
+*.suo
+*.VC.db
+*.VC.opendb
+*.pdb
+*.ilk
+*.obj
+*.exe
