@@ -14,6 +14,7 @@ find_package(OpenCV CONFIG REQUIRED COMPONENTS
     core
     highgui
     videoio
+    objdetect
 )
 
 add_executable(driverguard src/main.cpp)
