@@ -11,6 +11,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 find_package(ftxui CONFIG REQUIRED)
+find_package(SDL3 CONFIG REQUIRED)
 find_package(OpenCV CONFIG REQUIRED COMPONENTS
     core
     highgui
@@ -30,6 +31,7 @@ target_include_directories(driverguard SYSTEM PRIVATE
 target_link_libraries(driverguard PRIVATE
     ${OpenCV_LIBS}
     ftxui::ftxui
+    SDL3::SDL3
 )
 
 add_custom_command(
